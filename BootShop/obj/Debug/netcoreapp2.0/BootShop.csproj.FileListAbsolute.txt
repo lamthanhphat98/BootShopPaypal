@@ -1,0 +1,11 @@
+C:\Users\ADMIN\source\repos\BootShop\BootShop\bin\Debug\netcoreapp2.0\BootShop.deps.json
+C:\Users\ADMIN\source\repos\BootShop\BootShop\bin\Debug\netcoreapp2.0\BootShop.runtimeconfig.json
+C:\Users\ADMIN\source\repos\BootShop\BootShop\bin\Debug\netcoreapp2.0\BootShop.runtimeconfig.dev.json
+C:\Users\ADMIN\source\repos\BootShop\BootShop\bin\Debug\netcoreapp2.0\BootShop.dll
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\BootShop\BootShop\bin\Debug\netcoreapp2.0\BootShop.pdb
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.dll
+C:\Users\ADMIN\source\repos\BootShop\BootShop\obj\Debug\netcoreapp2.0\BootShop.pdb

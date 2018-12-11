@@ -1,0 +1,292 @@
+﻿@model BootShop.ViewModel.FindViewModel
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@{
+    ViewData["Title"] = "View";
+}
+
+
+<!DOCTYPE html>
+<!-- Website template by techcomsoft.vn -->
+<html>
+<!-- Mirrored from www.techcomsoft.vn/websites/124/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 12:14:13 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>RubberNLaces Website Template</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <link rel="stylesheet" href="~/css/site.min.css" type="text/css">
+    <style>
+        #imageList {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="background">
+        <div id="page">
+            <div id="header">
+                <div id="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="LOGO"></a>
+                </div>
+                <div id="navigation">
+                    <ul id="primary">
+                        <li class="selected">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="new.html">New Arrivals</a>
+                        </li>
+                        <li>
+                            <a href="mens.html">Mens</a>
+                        </li>
+                        <li>
+                            <a href="womens.html">Womens</a>
+                        </li>
+                        <li>
+                            <a href="faq.html">Faq</a>
+                        </li>
+                        <li class="highlight">
+                            <a href="sale.html">Sale Items</a>
+                        </li>
+                        <li>
+                            <a href="" id="showCart">Cart</a>
+                        </li>
+                        <li>
+                            <a href="index.html">Login</a> | <a href="index.html">Signup</a>
+                        </li>
+
+                    </ul>
+                    <ul id="secondary">
+                        @*<li>
+                                <a asp-action="ListCart" asp-controller="Boot">Cart</a>
+                            </li>*@
+
+                    </ul>
+                </div>
+
+            </div>
+            <div id="contents" class="mt-5">
+                <div id="adbox">
+                    <div id="search">
+                        <h3>Quick Search</h3>
+                        <p>
+
+                            Lorem ipsum dolor sit amet, consec tetur adipiscing elit, Praesent diam odio, commodo vittae sagittis vel,
+                        </p>
+                        <form asp-action="Find" asp-controller="Boot" method="post">
+                            <ul>
+                                <li>
+                                    <select id="size" asp-for="SizeId" asp-items="ViewBag.SelectSize">
+                                        <option value="-1">Search by Size</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <select id="color" asp-for="ColorId" asp-items="ViewBag.SelectColor">
+                                        <option value="-1">Search by Color</option>
+                                    </select>
+                                </li>
+
+                            </ul>
+                            <input type="submit" value="Find My Pair!" class="button">
+                        </form>
+                    </div>
+                    <img src="images/shop-now.jpg" height="355" width="618" alt="Promo"> <a href="index.html" class="button"></a> <span></span>
+                </div>
+                <div id="main">
+                    <div id="featured">
+                        <h4><span>New Items</span></h4>
+                        <div class="container">
+                            <div class="row">
+                                @foreach (var item in ViewBag.NewList)
+                                {
+                                <div class="col-md-3">
+                                   
+
+                                    <a asp-action="Detail" asp-controller="Boot" asp-route-id="@item.Id"> <img src="~/images/@item.Picture" alt="Img"> <span>$@item.Price</span> @item.Name </a>
+                                    <a class="btnadd">
+                                        <input type="hidden" class="bootId" value="@item.Id" />
+                                        <button class="btn btn-primary btn-heart" style="background-color:red; border-color:red;border-radius:5px;">
+                                            <i class="fa fa-heart">
+                                            </i>
+                                        </button>
+                                    </a>
+                                </div>
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sale">
+                        <h4><span>Sale Items</span></h4>
+                        <div class="container">
+                            <div class="row">
+                                @foreach (var item in ViewBag.SaleList)
+                                {
+                                    <div class="col-md-3">
+                                        
+                                        <a asp-action="Detail" asp-controller="Boot" asp-route-id="@item.Id"> <img src="~/images/@item.Picture" alt="Img"> <span>$@item.Price</span> @item.Name </a>
+                                        <a class="btnadd">
+                                            <input type="hidden" class="bootId" value="@item.Id" />
+                                            <button class="btn btn-primary btn-heart" style="background-color:red; border-color:red;border-radius:5px;">
+                                                <i class="fa fa-heart">
+                                                </i>
+                                            </button>
+                                        </a>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="background">
+                    <div id="connect">
+                        <h5>Get Social With us!</h5>
+                        <ul>
+                            <li>
+                                <a href="http://techcomsoft.vn/go/facebook/" target="_blank" class="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="http://techcomsoft.vn/go/twitter/" target="_blank" class="twitter"></a>
+                            </li>
+                            <li>
+                                <a href="http://www.techcomsoft.vn/go/googleplus/" target="_blank" class="linkin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="navigation">
+                        <li>
+                            <h5>Mens</h5>
+                            <a href="mens.html">Sneakers</a> <a href="mens.html">Boots</a> <a href="mens.html">Winter socks</a> <a href="mens.html">Lace-ups</a>
+                        </li>
+                        <li>
+                            <h5>Womens</h5>
+                            <a href="womens.html">Sneakers</a> <a href="womens.html">Boots</a> <a href="womens.html">Winter socks</a> <a href="womens.html">Lace-ups</a>
+                        </li>
+                        <li class="latest">
+                            <h5>New Arrivals</h5>
+                            <a href="new.html">Cheverlyn Zespax</a> <a href="new.html">Alta Ulterior</a> <a href="new.html">Mikee</a> <a href="new.html">Jeeroks Copy</a>
+                        </li>
+                        <li class="latest">
+                            <h5>On Sale Items</h5>
+                            <a href="sale.html">Cheverlyn Zespax</a> <a href="sale.html">Alta Ulterior</a> <a href="sale.html">Mikee</a> <a href="sale.html">Jeeroks Copy</a>
+                        </li>
+                    </ul>
+                    <p class="footnote">
+                        &copy; Copyirght &copy; 2011. <a href="index.html">Company name</a> all rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="modal fade" id="MyModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                            @*@Configuration.GetSection("Test")["TestApp"] access appsetting key*@
+                            <div class="modal-body">
+
+                                <form id="form">
+                                    <fieldset id="SubmitForm">
+
+                                        <div class="form-group">
+                                            <table id="showListCart" border="1"></table>
+                                        </div>
+
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <a asp-action="ListCart" asp-controller="Boot" class="btn btn-primary">Cart Detail</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#showCart').click(function (e) {
+                e.preventDefault();
+                var setData = $("#showListCart");
+                setData.empty();
+                $("#MyModal").modal("show");
+                $.ajax({
+                    type: 'GET',
+                    url: '/Boot/GetAllCart',
+                    success: function (value) {
+                        //var obj = JSON.parse(value);
+                        var obj = jQuery.parseJSON(JSON.stringify(value));
+                        console.log(obj);
+                        for (var i = 0; i < obj.length; i++) {
+                            var data = "<tr class='row_" + obj[i].productId + "'>" +
+
+                                "<td>" +
+                                '<img id="imageList" src="/images/' + obj[i].picture + '" alt="Img">' + "</td>" +
+
+                                "<td>" + obj[i].productName + "</td>" +
+
+                                "<td>" + obj[i].quantity + "</td>" +
+
+                                "<td>" + obj[i].price + "</td>" +
+
+                                "</tr>";
+
+                            setData.append(data);
+                        }
+                    }
+                });
+            });
+        });
+        $(document).ready(function () {
+            $('.btnadd').click(function () {
+               // var id = $('.bootId').val();
+                var self = $(this);
+                var cuid = self.find('.bootId').val();
+                console.log(cuid);
+                $.ajax({                 
+                    url: '/Boot/AddCart',
+                    data: { id: cuid },
+                    success: function (success, currentId) {
+                        // console.log(id);
+                        //alert("ADDED");
+                    }
+                });
+            });
+        });
+    </script>
+    @*//chua co popper js*@
+
+</body>
+<!-- Mirrored from www.techcomsoft.vn/websites/124/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 04 Dec 2018 12:14:18 GMT -->
+</html>
+

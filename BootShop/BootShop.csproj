@@ -1,0 +1,91 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Boot\index.cshtml" />
+    <Content Remove="Views\Boot\new.cshtml" />
+    <Content Remove="wwwroot\images\bg-body.jpg" />
+    <Content Remove="wwwroot\images\bg-body2.png" />
+    <Content Remove="wwwroot\images\bg-footer.jpg" />
+    <Content Remove="wwwroot\images\bg-header.png" />
+    <Content Remove="wwwroot\images\bg-menu-selected.gif" />
+    <Content Remove="wwwroot\images\bg-page.jpg" />
+    <Content Remove="wwwroot\images\bg-quick-search.jpg" />
+    <Content Remove="wwwroot\images\bg-strips.png" />
+    <Content Remove="wwwroot\images\boots-brown.jpg" />
+    <Content Remove="wwwroot\images\boots-green.jpg" />
+    <Content Remove="wwwroot\images\boots-view.jpg" />
+    <Content Remove="wwwroot\images\boots-view2.jpg" />
+    <Content Remove="wwwroot\images\boots-view3.jpg" />
+    <Content Remove="wwwroot\images\boots-view4.jpg" />
+    <Content Remove="wwwroot\images\boots-view5.jpg" />
+    <Content Remove="wwwroot\images\boots-violet.jpg" />
+    <Content Remove="wwwroot\images\boots-yellow.jpg" />
+    <Content Remove="wwwroot\images\buttons.png" />
+    <Content Remove="wwwroot\images\icons.png" />
+    <Content Remove="wwwroot\images\input.gif" />
+    <Content Remove="wwwroot\images\leather-boots.jpg" />
+    <Content Remove="wwwroot\images\leather-boots2.jpg" />
+    <Content Remove="wwwroot\images\leather-boots3.jpg" />
+    <Content Remove="wwwroot\images\logo.png" />
+    <Content Remove="wwwroot\images\separator-horizontal.png" />
+    <Content Remove="wwwroot\images\shadow.jpg" />
+    <Content Remove="wwwroot\images\shop-now.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.Dotnet" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.Dotnet" Version="2.0.0" />
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Boot\Index.cshtml" />
+    <None Include="Views\Boot\new.cshtml" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\fonts\hammersmithone-webfont.eot" />
+    <None Include="wwwroot\fonts\hammersmithone-webfont.svg" />
+    <None Include="wwwroot\fonts\hammersmithone-webfont.ttf" />
+    <None Include="wwwroot\fonts\hammersmithone-webfont.woff" />
+    <None Include="wwwroot\fonts\hammersmithone-webfontd41d.eot" />
+    <None Include="wwwroot\images\bg-body.jpg" />
+    <None Include="wwwroot\images\bg-body2.png" />
+    <None Include="wwwroot\images\bg-footer.jpg" />
+    <None Include="wwwroot\images\bg-header.png" />
+    <None Include="wwwroot\images\bg-menu-selected.gif" />
+    <None Include="wwwroot\images\bg-page.jpg" />
+    <None Include="wwwroot\images\bg-quick-search.jpg" />
+    <None Include="wwwroot\images\bg-strips.png" />
+    <None Include="wwwroot\images\boots-brown.jpg" />
+    <None Include="wwwroot\images\boots-green.jpg" />
+    <None Include="wwwroot\images\boots-view.jpg" />
+    <None Include="wwwroot\images\boots-view2.jpg" />
+    <None Include="wwwroot\images\boots-view3.jpg" />
+    <None Include="wwwroot\images\boots-view4.jpg" />
+    <None Include="wwwroot\images\boots-view5.jpg" />
+    <None Include="wwwroot\images\boots-violet.jpg" />
+    <None Include="wwwroot\images\boots-yellow.jpg" />
+    <None Include="wwwroot\images\buttons.png" />
+    <None Include="wwwroot\images\icons.png" />
+    <None Include="wwwroot\images\input.gif" />
+    <None Include="wwwroot\images\leather-boots.jpg" />
+    <None Include="wwwroot\images\leather-boots2.jpg" />
+    <None Include="wwwroot\images\leather-boots3.jpg" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\separator-horizontal.png" />
+    <None Include="wwwroot\images\shadow.jpg" />
+    <None Include="wwwroot\images\shop-now.jpg" />
+  </ItemGroup>
+
+</Project>
